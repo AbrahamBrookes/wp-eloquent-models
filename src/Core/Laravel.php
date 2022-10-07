@@ -37,7 +37,9 @@ class Laravel
                     'password' => '',
                     'name'     => '',
                     'host'     => '',
-                    'port'     => '3306'
+                    'port'     => '3306',
+                    'charset'  => 'utf8',
+                    'collation'  => 'utf8_unicode_ci',
                 ],
 
                 'prefix' => 'wp_'
@@ -60,8 +62,8 @@ class Laravel
                 'username'  => $options['config']['database']['user'],
                 'password'  => $options['config']['database']['password'],
                 'port'      => $options['config']['database']['port'],
-                'charset'   => 'utf8',
-                'collation' => 'utf8_unicode_ci',
+                'charset'   => $options['config']['database']['charset'],
+                'collation' => $options['config']['database']['collation'],
                 'prefix'    => $options['config']['prefix']
             ]);
 
